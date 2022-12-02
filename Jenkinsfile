@@ -4,7 +4,7 @@ pipeline{
     stage('build'){
       steps{
             sh 'pwd'
-            sh 'ls
+            sh 'ls'
       }
     }
   }
