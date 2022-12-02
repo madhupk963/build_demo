@@ -1,10 +1,18 @@
 pipeline{
-agent none
-stages{
-stage('deploy'){
-agent{label 'slaveone'}
-steps{
-sh 'pwd'
-}
-}
+  agent none
+  stages{
+    stage('build'){
+      agent{label 'slaveone'}
+      steps{
+            sh 'pwd'
+            echo "package build successfully and copied"
+      }
+    }
+    stage('deploy'){
+      agent{label 'slavetwo'}
+      steps{
+        sh 'sudo sh /opt/tomcat/bin/startup.sh'
+      }
+    }
+  }
 }
