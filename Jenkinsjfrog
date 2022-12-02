@@ -7,7 +7,9 @@ pipeline{
             sh 'pwd'
             sh 'echo ${BUILD_NUMBER}'
             sh 'mvn deploy'
-            sh 'scp -r build_demo/target/build_demo-${BUILD_NUMBER}.war root@172.31.2.54:/opt/tomcat/webapps'
+            sh 'pwd'
+            sh 'ls'
+            sh 'scp -r target/build_demo-${BUILD_NUMBER}.war root@172.31.2.54:/opt/tomcat/webapps'
             echo "package build successfully and deployed"
       }
     }
