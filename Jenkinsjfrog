@@ -1,0 +1,10 @@
+pipeline{
+agent none
+stages{
+stage('deploy'){
+agent{label 'slaveone'}
+steps{
+sh 'pwd'
+}
+}
+}
