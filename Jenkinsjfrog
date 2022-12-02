@@ -5,6 +5,7 @@ pipeline{
       agent{label 'slaveone'}
       steps{
             sh 'pwd'
+            sh 'echo ${BUILD_NUMBER}'
             echo "package build successfully and copied"
       }
     }
