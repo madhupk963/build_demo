@@ -9,5 +9,11 @@ pipeline{
             echo "package build successfully"
       }
     }
+    stage('deploy'){
+      agent{label 'slavetwo'}
+      steps{
+        sh 'sudo sh /opt/tomcat/bin/startup.sh'
+      }
+    }
   }
 }
