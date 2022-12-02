@@ -4,6 +4,7 @@ pipeline{
     stage('build'){
       agent{label 'slaveone'}
       steps{
+            sh "echo ${BUILD_NUMBER}"
             sh 'pwd'
             sh 'mvn package'
             sh 'scp -r target/build-demo-1.0.0.war root@172.31.2.54:/opt/tomcat/webapps'
