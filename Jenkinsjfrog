@@ -14,7 +14,7 @@ pipeline{
       agent{label 'slavetwo'}
       steps{
         sh 'curl -umadhusudhanpk.madhu@gmail.com:cmVmdGtuOjAxOjAwMDAwMDAwMDA6ZnpuWXM2NlpuWjBMSHpTNFdVeHNYMkNRNWRE -O https://madhusudhan.jfrog.io/artifactory/libs-release-local/com/efsavage/build-demo/${BUILD_NUMBER}/build-demo-${BUILD_NUMBER}'
-        sh 'scp -R build_demo-${BUILD_NUMBER}.war  root@172.31.2.54:/opt/tomcat/webapps'
+        sh 'cp -R build_demo-${BUILD_NUMBER}.war /opt/tomcat/webapps'
         sh 'sudo sh /opt/tomcat/bin/startup.sh'
       }
     }
