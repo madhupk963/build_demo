@@ -25,12 +25,12 @@
 			</plugin>
 		</plugins>
 	</build>
-	<distributionManagement>
-              <repository>
-                   <id>central</id>
-                   <name>a0xtq8xz9i8ql-artifactory-primary-0-releases</name>
-                   <url>https://madhusudhan.jfrog.io/artifactory/libs-release-local</url>
-              </repository>
-        </distributionManagement>
+	 <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0o7zeymtay8k-artifactory-primary-0-releases</name>
+        <url>https://madhusudhanpk.jfrog.io/artifactory/libs-release</url>
+    </repository>
+</distributionManagement>
 
 </project>
